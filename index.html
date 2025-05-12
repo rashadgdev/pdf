@@ -32,6 +32,26 @@
         margin-bottom: 10px;
       }
 
+      .mt-10 {
+        margin-top: 10px;
+      }
+
+      .ml-10 {
+        margin-left: 10px;
+      }
+
+      .mb-30 {
+        margin-bottom: 30px;
+      }
+
+      .mt-5 {
+        margin-top: 5px;
+      }
+
+      .mt-20 {
+        margin-top: 20px;
+      }
+
       .mb-20 {
         margin-bottom: 20px;
       }
@@ -54,8 +74,62 @@
         justify-content: center;
       }
 
-      span {
-        text-decoration: underline;
+      .grey-block {
+        background-color: #caced0;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+      }
+
+      .grey-block-46 {
+        background-color: #caced0;
+        width: 46%;
+        height: 40px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+      }
+
+      .grey-block-46:first-child {
+        margin-right: 48px;
+      }
+
+      .underlined {
+        position: relative;
+        display: inline-block;
+      }
+
+      .underlined::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        background: black;
+        min-width: 140px;
+        width: 100%;
+      }
+
+      .block {
+        width: 46%;
+      }
+
+      .block:first-child {
+        margin-right: 48px;
+      }
+
+      .blocks {
+        display: flex;
+      }
+
+      label {
+        margin-right: 5px;
+      }
+
+      .checkbox-row {
+        margin-bottom: 20px;
       }
 
       @media print {
@@ -354,7 +428,7 @@
         <div class="mb-20">* Əlavə gəlir mənbəyiniz var?</div>
       </div> -->
 
-      <div class="content">
+      <!-- <div class="content">
         <div class="row">
           <h4>
             HESABIN YEKUN SAHİBİ VƏ YA MALİYYƏLƏŞDİRƏN ŞƏXS(SPONSOR) HAQQINDA
@@ -460,7 +534,175 @@
 
         <div class="mb-10">* Telefonlar: <span>{{0555555555}}</span></div>
         <div class="mb-10">* E- poçt : <span>{{test@mail.com}}</span></div>
+      </div> -->
+
+      <div class="content">
+        <div class="mb-10">
+          <p>
+            * Məşğulluq statusu:
+            <input type="checkbox" />
+            <label>İşləyir</label>
+            <input type="checkbox" />
+            <label>Şəxsi iş</label>
+            <input type="checkbox" />
+            <label>Sahibkarlıq</label>
+            <input type="checkbox" />
+            <label>Pensiya</label>
+            <input type="checkbox" />
+            <label>Tələbə</label>
+            <input type="checkbox" />
+            <label>İşsiz</label>
+            <input type="checkbox" />
+            <label>Digər (z.o. açıqlayın)</label>
+          </p>
+        </div>
+        <div class="mb-30">
+          <p class="mb-10">
+            Yuxarıda qeyd edilən əlavə gəlir mənbələri üzrə illik gəlirin ümumi
+            məbləği və dövrülüyü:
+          </p>
+          <div class="checkbox-row">
+            <input type="checkbox" />
+            <label for="beli">10,000 AZN qədər </label>
+            <input type="checkbox" />
+            <label for="xeyr">10,000 – 50,000 AZN </label>
+            <input type="checkbox" />
+            <label for="xeyr">50,000 – 100,000 AZN </label>
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" />
+            <label for="beli">100,000 – 150,000 AZN</label>
+            <input type="checkbox" />
+            <label for="xeyr">150,000 AZN-dən çox</label>
+            Digər <span class="underlined"> {{20000000}} </span> (AZN)
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" />
+            <label for="beli">Həftəlik</label>
+            <input type="checkbox" />
+            <label for="xeyr">Aylıq</label>
+            <input type="checkbox" />
+            <label for="xeyr">İllik</label>
+          </div>
+        </div>
+
+        <div class="mb-30">
+          <p class="mb-10">
+            Şəxs, yaxın qohumu və ya yaxın münasibətdə olduğu şəxs siyasi
+            nüfuzlu şəxsdirmi?
+          </p>
+          <input type="checkbox" />
+          <label for="beli">Bəli</label>
+          <input type="checkbox" />
+          <label for="xeyr">Xeyr</label>
+          <input type="checkbox" />
+          <label for="xeyr">Siyasi nüfuzlu şəxsin yaxın qohumu</label>
+          <input type="checkbox" />
+          <label for="xeyr"
+            >Siyasi nüfuzlu şəxsin yaxın münasibətdə olduğu şəxs</label
+          >
+
+          <div class="mt-10">
+            <label
+              >Zəhmət olmasa Siyasi nüfuzlu şəxs (yaxın qohum və ya yaxın
+              münasibətdə olduğu şəxs) olduğu halda “Siyasi nüfüzlu şəxs” və
+              “Sərvətin mənbəyi”anketlərini doldurun</label
+            >
+          </div>
+        </div>
+
+        <div>
+          <label>* Cinayət məsuliyyətinə cəlb edilib?</label>
+          <input type="checkbox" />
+          <label for="beli">Bəli</label>
+          <input type="checkbox" />
+          <label for="xeyr">Xeyr</label>
+
+          <div class="mt-10">
+            <label
+              >Cavab “Bəli” olduğu təqdirdə, zəhmət olmasa açıqlayın:</label
+            >
+            <span class="underlined"> {{Reason Reason Reason Reason}} </span>
+          </div>
+        </div>
       </div>
+
+      <!-- <div class="content">
+        <div class="grey-block">
+          <h4 class="mt-5">MÜŞTƏRİ BƏYANNAMƏSİ</h4>
+        </div>
+
+        <p class="mt-20 ml-10">
+          Bununla təqdim edilmiş məlumatların düzgünlüyünü və məlumatlarda baş
+          verən hər bir dəyişikliklər barədə bankı vaxtında məlumatlandıracağımı
+          imzamla təsdiq edirəm. Qeyd olunmuş ŞİFRƏni təqdim etmək şərtilə
+          telefon vasitəsilə hesab üzrə məlumatın müraciət edən şəxsə
+          verilməsinə etiraz etmirəm. AR dövlət informasiya sistemlərindən
+          verifikasiya üçün şəxsiyyət vəsiqəsi üzrə məlumatlarımın Bank
+          tərəfindən əldə edilib çap olunmasına etiraz etmirəm.
+        </p>
+
+        <p class="mt-20">
+          Qeyd: «Cinayət yolu ilə əldə edilmiş əmlakın leqallaşdırılmasına və
+          terrorçuluğun maliyyələşdirilməsinə qarşı mübarizə haqqında»
+          Azərbaycan Respublikasının Qanunu hər hansı dövlətin siyasi nüfuzlu
+          şəxslərinin, onların yaxın qohumlarınin və ya yaxın münasibətdə olduğu
+          şəxslərinin pul vəsaitləri və ya digər əmlakla əməliyyatlarına
+          münasibətdə bu Qanunda nəzərdə tutulan eyniləşdirmə və verifikasiya
+          tədbirləri ilə yanaşı, əlavə eyniləşdirmə tədbirlərinin tətbiqini
+          tələb edir. «Cinayət yolu ilə əldə edilmiş əmlakın leqallaşdırılmasına
+          və terrorçuluğun maliyyələşdirilməsinə qarşı mübarizə haqqında»
+          Azərbaycan Respublikası Qanununun 1.1.24-1.1.26-cı maddələrinə əsasən
+          hər hansı dövlətlərin siyasi nüfuzlu şəxsləri, onların yaxın qohumları
+          və ya yaxın münasibətdə olduğu şəxslərə aşağıdakı şəxslər aid edilib:
+          1) Hər hansı dövlətdə mühüm ictimai vəzifə tutan və ya əvvəllər belə
+          vəzifəni tutmuş şəxslər – dövlət və ya hökumət başçıları, nüfuzlu
+          siyasətçilər, hökumət üzvləri, yuxarı instansiya məhkəmələrinin
+          hakimləri, yüksək rütbəli hərbi qulluqçular, dövlət mülkiyyətində olan
+          müəssisələrin rəhbər vəzifəli şəxsləri, siyasi partiya vəzifəli
+          şəxsləri və s.; 2) Hər hansı dövlətdə mühüm ictimai vəzifə tutan və ya
+          əvvəllər belə vəzifəni tutmuş şəxslərin yaxın qohumları;3) Hər hansı
+          dövlətdə mühüm ictimai vəzifə tutan və ya əvvəllər belə vəzifəni
+          tutmuş şəxslərin yaxın münasibətdə olduğu şəxslər
+        </p>
+
+        <p class="mt-20">
+          Qeyd:Yaxın qohumlara siyasi nüfuzlu şəxslərin valideynləri, babaları,
+          nənələri, əri, arvadı, uşaqları, nəvələri, doğma və ögey qardaşları və
+          bacıları, övladlığa götürənləri (götürülənləri) aiddir.
+        </p>
+
+        <p class="mt-20">
+          Qeyd:Yaxın münasibətdə olduğu şəxslərə siyasi nüfuzlu şəxslə eyni
+          hüquqi şəxs və ya xarici hüquqi təsisatın ortaq benefisiar
+          mülkiyyətçisi olan və ya onunla istənilən digər sıx sahibkarlıq
+          münasibətində olan fiziki şəxslər, siyasi nüfuzlu şəxslərin faktiki
+          mənfəət əldə etməsi məqsədilə təsis edilmiş hüquqi şəxsin və ya xarici
+          hüquqi təsisatın təsisçisi və ya benefisiar mülkiyyətçisi olan fiziki
+          şəxslər və yaxud adlarına siyasi nüfuzlu şəxsə faktiki məxsus əmlaka
+          hüquqların rəsmiləşdirildiyi şəxslər aiddir.
+        </p>
+
+        <div class="blocks mt-20 mb-10">
+          <div class="block">
+            <h4>Müştərinin Adı, Soyadı</h4>
+          </div>
+          <div class="block">
+            <h4>Müştərinin imzası</h4>
+          </div>
+        </div>
+
+        <div class="blocks mb-20">
+          <div class="grey-block-46"></div>
+          <div class="grey-block-46"></div>
+        </div>
+
+        <p>
+          <b><i>Qeyd:</i></b> Ərizə başlıqda göstərilən tarixdən qüvvəyə minir.
+        </p>
+      </div> -->
     </div>
   </body>
 </html>
